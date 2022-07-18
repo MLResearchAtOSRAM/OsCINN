@@ -1,7 +1,7 @@
 """ Copyright Nerrror (Alexander Luce)
     Copyright (c) 2021 AMS-Osram"""
 
-from model.cond_resnet import *
+from fen import build_entry_flow, ResNet_1D, ResNet_1D_dense_output
 import warnings
 
 from tqdm import tqdm
@@ -10,11 +10,6 @@ import torch.nn as nn
 
 import FrEIA.framework as Ff
 import FrEIA.modules as Fm
-import FrEIA as fr
-# from FrEIA.modules import GLOWCouplingBlock as glow
-# from FrEIA.modules import NICECouplingBlock as nice
-from FrEIA.modules import RNVPCouplingBlock as rnvp
-from FrEIA.modules import PermuteRandom as permute
 from FrEIA.modules.all_in_one_block import *
 from FrEIA.framework.reversible_sequential_net import *
 
@@ -26,13 +21,13 @@ def tile(a, dim, n_tile):
     order_index = torch.LongTensor(torch.cat([init_dim * torch.arange(n_tile) + i for i in range(init_dim)]))
     return torch.index_select(a, dim, order_index)
 
-class OsCinn1D():
+class OScINN1D:
 
     def __init__(self, input_dim, cond_dim, num_of_blocks=8, cuda=True):
         '''
         Creates a cINN for 1D input and conditional data.
 
-        OsCINN1D is a wrapper class for the FrEIA Sequential cINN from the FrEIA package which was
+        OScINN1D is a wrapper class for the FrEIA Sequential cINN from the FrEIA package which was
         used in the Master Thesis of Alexander Luce for prediction of multilayer thin-films. 
 
         Parameters
@@ -69,7 +64,7 @@ class OsCinn1D():
             warnings.warn(f'Cuda not available - Move Network to cpu instead\nMake sure to only pass Tensors on cpu to the Network!')
 
 
-        self.cond_net = ResNet18_1D_dense_output(channels = [20,20], levels = 2) # TODO: automatic shape
+        self.cond_net = ResNet_1D_dense_output(channels = [20,20], levels = 2) # TODO: automatic shape
         self.cinn = Ff.SequenceINN(self.input_dim)
 
 
@@ -107,7 +102,7 @@ class OsCinn1D():
         dims_out : int
             output dimension
         '''
-        return nn.Sequential(nn.Linear(dims_in, 512), nn.ReLU(), nn.BatchNorm1d(512),# vielleicht mal ohne bn probieren
+        return nn.Sequential(nn.Linear(dims_in, 512), nn.ReLU(), nn.BatchNorm1d(512),
                             nn.Linear(512, 512), nn.ReLU(),
                             nn.Linear(512,  dims_out))
 
@@ -318,7 +313,7 @@ class OsCinn1D():
     
 if __name__ == '__main__':
     print('run a small test on a cinn with random data to test the functionality')
-    oscinn = OsCinn1D(9, 100, 8, cuda=False)
+    oscinn = OScINN1D(9, 100, 8, cuda=False)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     c = c2 = torch.randn(50, 1, 100).to(device)
     x = torch.randn(50, 9).to(device)
