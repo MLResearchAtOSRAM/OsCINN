@@ -33,7 +33,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">LedModelOptimizer</h3>
+<h3 align="center">OScINN</h3>
 
   <p align="center">
     project_description
@@ -81,27 +81,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The LedModelOptimizer package is a comprehensive Python package which aims to integrate gradient based optimization of LED models into a coherent framework. 
-There are four key areas which need to be covered in order to get the the optimization going:
-* A differentiable LED model
-* Differentiable Simulations
-* Differentiable Simulation post-processing
-* Differentiable Loss functions
+The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks". 
 
-While the last two parts are rather straight forward, especially the first two are particularly challenging. But let's first briefly discuss why we need these components.
-First of all, we have a lot of parameters $$\varrho$$ which need to be chosen for an LED model. Depending on the complexity of the model, there might be a handful or a few hundred of parameters which 
-have to be chosen. In order to optimize the parameters, we need the sensitivity of every of the parameters wrt. a loss. The loss is computed by passing through from the model to the simulation, post-processing and finally the loss. The sensitivity is then the gradient of this loss wrt. to every parameter:
+The Repo contains only the architecture for the network, which was evaluated in the but also contains a short *Introduction* jupyter notebook which gives an example how to use the networks.
 
-$$ \frac{\partial \mathcal{L}}{\partial \varrho} = \frac{\partial C}{\partial \text{post-processing}} 
-\frac{\partial \text{post-processing}}{\partial \text{simulation}} 
-\frac{\partial \text{simulation}}{\partial \text{model}}
-\frac{\partial \text{model}}{\partial \varrho}$$
-
-From the equation it is clear that every intermediate step in the chain must be differentiable on its own. 
-In essence, this is the same chain of function which is also present in neural networks - therefore it makes sense to use the functionality which enabled the efficient computation of a huge number of gradients in neural networks: **Autograd**.
-
-In this package, we use the autograd functionality of PyTorch to build the computational graph and to define '''.forward()''' and '''.backward()''' functions for the individual operations of the component of the chain. Therefore, most of the classes which define the the workflow are child classes of torch.nn.Module or torch.autograd.Function. This has the huge benefit that it is possible to create very complicated and intertwined computational graphs without worrying to much about making sure that all functions are correctly passed during the backward pass. 
-
+For replicating the results of the paper, the thin-film computation can be done via the TMM-Fast package, which also contains convenience routines for dataset generation. Have fun!
 
 Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
