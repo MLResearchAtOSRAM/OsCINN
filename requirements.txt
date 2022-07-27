@@ -1,4 +1,4 @@
-pytorch
-matplotlib
-FrEIA
-tqdm
+pytorch>=1.9.0
+matplotlib>=3.3.2
+freia>=0.2
+tqdm>=4.46.0
