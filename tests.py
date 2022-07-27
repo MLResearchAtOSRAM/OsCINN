@@ -43,3 +43,6 @@ def test():
     oscinn.train(dataloader, 2)
 
     print('oscinn finished successfully ')
+
+if __name__=='__main__':
+    test()
