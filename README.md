@@ -24,12 +24,13 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- PROJECT LOGO 
 <br />
 <div align="center">
   <a href="https://github.com/MLResearchAtOSRAM/OsCINN">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
+  -->
 
 <h1 align="center">OScINN</h1>
 
