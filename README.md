@@ -146,7 +146,7 @@ https://doi.org/10.48550/arXiv.2105.02104
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [stars-shield]: https://img.shields.io/github/stars/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
-[stars-url]: https://github.com/MLResearchAtOSRAM/OsCINN/stargazers 
+[stars-url]: https://github.com/MLResearchAtOSRAM/cause2e/stargazers 
 
 <!-- [stars-shield]: https://img.shields.io/github/stars/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
 [stars-ur
