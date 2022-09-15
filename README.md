@@ -17,7 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -33,7 +32,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">OScINN</h3>
+<h1 align="center">OScINN</h1>
 
   <p align="center">
     project_description
@@ -79,7 +78,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks"[[1]](#1)[[2]](#2). 
+The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks"[[1](#1),[2](#2)]. The architecture is heavily based on the contribution of Ardizzone et al [3](#3) who published the [FrEIA]() package which enabled our work.
 
 The Repo contains only the architecture for the network, which was evaluated in the aforementioned paper but also contains a short *Introduction* jupyter notebook which gives an example how to use the networks.
 
@@ -98,11 +97,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You only need a running Python environment with Python >= 3.7. Its recommended to use Conda to set up an environment 
 
 ### Installation
 
@@ -114,6 +109,7 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    pip install -r requirements.txt
    ```
+3. Train some Network!
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -130,10 +126,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* []()
-* []()
-* []()
+Thanks to
+* [Heribert Wankerl](https://github.com/HarryTheBird) for contributing to the development 
+* [Maike Stern](https://github.com/MLResearchAtOSRAM) for running the Repo
+* [Daniel Grünbaum](https://github.com/dg46) just for fun
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -150,18 +146,24 @@ Luce, A. et. al. (2022).
 Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks. 
 Publication.
 
+<a id="3">[3]</a> 
+Ardizzone, L. et. al. (2020). 
+Conditional Invertible Neural Networks for Diverse Image-to-Image Translation. 
+https://doi.org/10.48550/arXiv.2105.02104
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
-[contributors-url]: https://github.com/MLResearchAtOSRAM/OsCINN/graphs/contributors
+
 [forks-shield]: https://img.shields.io/github/forks/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
 [forks-url]: https://github.com/MLResearchAtOSRAM/OsCINN/network/members
+
 [stars-shield]: https://img.shields.io/github/stars/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
 [stars-url]: https://github.com/MLResearchAtOSRAM/OsCINN/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
 [issues-url]: https://github.com/MLResearchAtOSRAM/OsCINN/issues
+
 [license-shield]: https://img.shields.io/github/license/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
-[license-url]: https://github.com/MLResearchAtOSRAM/OsCINN/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[license-url]: https://github.com/MLResearchAtOSRAM/OsCINN/master/LICENSE.txt
+
 [product-screenshot]: images/screenshot.png
