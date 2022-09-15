@@ -17,7 +17,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
@@ -35,16 +34,11 @@
 <h1 align="center">OScINN</h1>
 
   <p align="center">
-    project_description
+    Implementation of a 1D conditional Invertible Neural Network
     <br />
     <a href="https://github.com/MLResearchAtOSRAM/OsCINN"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/MLResearchAtOSRAM/OsCINN">View Demo</a>
-    ·
-    <a href="https://github.com/MLResearchAtOSRAM/OsCINN/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/MLResearchAtOSRAM/OsCINN/issues">Request Feature</a>
   </p>
 </div>
 
@@ -78,7 +72,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks"[[1](#1),[2](#2)]. The architecture is heavily based on the contribution of Ardizzone et al [[3](#3)] who published the [FrEIA](https://github.com/VLL-HD/FrEIA) package which enabled our work.
+The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks" [[1](#1), [2](#2)]. The architecture is heavily based on the contribution of Ardizzone et al [[3](#3)] who published the [FrEIA](https://github.com/VLL-HD/FrEIA) package which enabled our work.
 
 The Repo contains only the architecture for the network, which was evaluated in the aforementioned paper but also contains a short *Introduction* jupyter notebook which gives an example how to use the networks.
 
