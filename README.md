@@ -17,7 +17,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Stargazers][stars-shield]][stars-url]
+[![Stargazers][https://img.shields.io/github/stars/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge]][https://github.com/MLResearchAtOSRAM/OsCINN/stargazers]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
