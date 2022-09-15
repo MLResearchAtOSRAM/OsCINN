@@ -78,13 +78,11 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks"[[1](#1),[2](#2)]. The architecture is heavily based on the contribution of Ardizzone et al [3](#3) who published the [FrEIA]() package which enabled our work.
+The OScINN implements the invertible- and conditional neural networks from the paper "Investigation of inverse design of multilayer thin-films with conditional invertible Neural Networks"[[1](#1),[2](#2)]. The architecture is heavily based on the contribution of Ardizzone et al [[3](#3)] who published the [FrEIA](https://github.com/VLL-HD/FrEIA) package which enabled our work.
 
 The Repo contains only the architecture for the network, which was evaluated in the aforementioned paper but also contains a short *Introduction* jupyter notebook which gives an example how to use the networks.
 
 For replicating the results of the paper, the thin-film computation/dataset generation can be done via the TMM-Fast(https://github.com/MLResearchAtOSRAM/tmm_fast) package, which also contains convenience routines for dataset generation. Have fun!
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `MLResearchAtOSRAM`, `OsCINN`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,12 +90,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Since the scope of this package is quite narrow, it is best to follow the [Introduction.ipynb](https://github.com/MLResearchAtOSRAM/OsCINN/blob/master/Introduction.ipynb). The package provides encapsulates the functionality provided by the FrEIA package to make it easy to replicate the results of the publication [[1](#1)]. It is of course possible to use the architecture for other 1D problems to but then, it might be wise to implement the networks yourself in order to gain access to the full capabilities of conditional Invertible Neural Networks.
 
 ### Prerequisites
 
-You only need a running Python environment with Python >= 3.7. Its recommended to use Conda to set up an environment 
+You only need a running Python environment with Python >= 3.7. Its recommended to use [Conda](https://www.anaconda.com/products/distribution) to set up the environment.
 
 ### Installation
 
@@ -153,9 +150,6 @@ https://doi.org/10.48550/arXiv.2105.02104
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-
-[forks-shield]: https://img.shields.io/github/forks/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
-[forks-url]: https://github.com/MLResearchAtOSRAM/OsCINN/network/members
 
 [stars-shield]: https://img.shields.io/github/stars/MLResearchAtOSRAM/OsCINN.svg?style=for-the-badge
 [stars-url]: https://github.com/MLResearchAtOSRAM/OsCINN/stargazers
